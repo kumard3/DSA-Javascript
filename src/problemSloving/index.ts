@@ -1,4 +1,4 @@
-function charCount(str:string[]) {
+function charCount(str:string[]){
     var obj = {};
     for (var char of str) {
       char = char.toLowerCase();
@@ -90,3 +90,4 @@ function charCount(str:string[]) {
   //     if()
   //   }
   // }
+console.log("same");
