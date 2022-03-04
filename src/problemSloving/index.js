@@ -56,20 +56,15 @@ function same(arr1, arr2) {
   return true;
 }
 
-function validAnagram(string1, string2) {
-  if (string1.length !== string2.length) {
-    return false;
-  }
+function validAnagram(string1) {
+  let string2 = [`()`, `[]`, `{}`];
   let frequencyCount1 = {};
-  let frequencyCount2 = {};
+  let frequencyCount2 = string2;
 
   for (const value of string1) {
-    frequencyCount1[value] = ++frequencyCount1[value] || 1;
+    frequencyCount1[value] = ++frequencyCount1[value]
   }
-
-  for (const value of string2) {
-    frequencyCount2[value] = ++frequencyCount2[value] || 1;
-  }
+  console.log(frequencyCount1,frequencyCount2)
   for (const key in frequencyCount1) {
     if (!(key in frequencyCount2)) {
       return false;
@@ -78,10 +73,10 @@ function validAnagram(string1, string2) {
       return false;
     }
   }
-  return true
+  return true;
 }
-
-//pointer pattern 
+console.log(validAnagram("[][}{}"));
+//pointer pattern
 
 // function pointerPattern (arr){
 //   left = 0;
