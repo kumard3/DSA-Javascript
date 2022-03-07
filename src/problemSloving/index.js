@@ -62,9 +62,9 @@ function validAnagram(string1) {
   let frequencyCount2 = string2;
 
   for (const value of string1) {
-    frequencyCount1[value] = ++frequencyCount1[value]
+    frequencyCount1[value] = ++frequencyCount1[value];
   }
-  console.log(frequencyCount1,frequencyCount2)
+  console.log(frequencyCount1, frequencyCount2);
   for (const key in frequencyCount1) {
     if (!(key in frequencyCount2)) {
       return false;
@@ -75,7 +75,6 @@ function validAnagram(string1) {
   }
   return true;
 }
-console.log(validAnagram("[][}{}"));
 //pointer pattern
 
 // function pointerPattern (arr){
@@ -85,3 +84,13 @@ console.log(validAnagram("[][}{}"));
 //     if()
 //   }
 // }
+
+function factorial(n) {
+  let total = 1;
+  for (let i = 1; i <= n; i++) {
+    total = total * i;
+  }
+  return total;
+}
+
+console.log(factorial(5));
